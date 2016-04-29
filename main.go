@@ -5,9 +5,18 @@ import (
 	// "os"
 )
 
-	
-func main() {
-	haystack := "The spice must flow"
-	cut := strings.index(haystack[5:], " ")
-	fmt.Println(cut)
+
+type Saiyan struct {
+	Name string
+	Power int
 }
+
+func (s *Saiyan) Super() {
+	s.Power += 10000
+}
+
+func main() {
+	goku := Saiyan{"Goku", 9001}
+	goku.Super()
+	fmt.Println(goku.Power)
+}	
